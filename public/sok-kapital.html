@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Søk kapital — Quad AS</title>
-<meta name="description" content="Søker selskapet ditt en kapitalpartner? Send en henvendelse til Quad AS." />
+<meta name="description" content="Søker selskapet ditt en kapitalpartner? Presenter selskapet for Quad AS." />
 <link rel="stylesheet" href="/stil.css" />
 <style>
   .skjema-intro { max-width: 720px; margin: 0 auto; padding: 64px 0 8px; text-align: center; }
@@ -12,15 +12,15 @@
     font-family: ui-serif, Georgia, serif; font-weight: 500;
     font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.02em; margin: 0 0 16px;
   }
-  .skjema-intro p { color: var(--dempet); font-size: 17px; margin: 0 auto; max-width: 56ch; }
+  .skjema-intro p { color: var(--dempet); font-size: 17px; margin: 0 auto; max-width: 58ch; }
   .skjemaboks { max-width: 720px; margin: 0 auto; padding: 28px 0 90px; }
-  fieldset {
+  .seksjon {
     border: 1px solid var(--linje); border-radius: 14px;
-    padding: 24px 26px 8px; margin: 0 0 22px; background: var(--kort);
+    padding: 8px 26px 8px; margin: 0 0 22px; background: var(--kort);
   }
-  legend {
-    font-family: ui-serif, Georgia, serif; font-size: 15px; font-weight: 500;
-    padding: 0 10px; color: var(--teal);
+  .seksjon > h2 {
+    font-family: ui-serif, Georgia, serif; font-size: 17px; font-weight: 500;
+    color: var(--teal); margin: 22px 0 18px; padding: 0; border: 0;
   }
   .rad { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
   .felt { margin-bottom: 18px; }
@@ -73,13 +73,13 @@
   <main>
     <section class="skjema-intro">
       <h1>Søker dere en kapitalpartner?</h1>
-      <p>Quad AS investerer vekstkapital i gründerledede selskaper med velprøvde produkter og kommersiell fremdrift. Fortell oss om selskapet, så tar vi kontakt dersom det er aktuelt.</p>
+      <p>Quad AS investerer vekstkapital i gründerledede selskaper med velprøvde produkter og kommersiell fremdrift. Vil du presentere selskapet ditt? Fyll ut skjemaet under — vi leser alle henvendelser og tar kontakt dersom dette ser ut til å passe oss.</p>
     </section>
 
     <section class="skjemaboks">
       <form id="pitchskjema">
-        <fieldset>
-          <legend>Selskapet</legend>
+        <div class="seksjon">
+          <h2>Om selskapet</h2>
           <div class="rad">
             <div class="felt">
               <label for="selskap">Selskapsnavn <span class="pakrevd">*</span></label>
@@ -90,28 +90,40 @@
               <input id="nettside" name="nettside" placeholder="https://" />
             </div>
             <div class="felt">
-              <label for="bransje">Bransje / sektor <span class="pakrevd">*</span></label>
-              <input id="bransje" name="bransje" required placeholder="f.eks. SaaS, industri, fintech" />
+              <label for="bransje">Bransje eller sektor <span class="pakrevd">*</span></label>
+              <input id="bransje" name="bransje" required placeholder="f.eks. programvare, industri, fintech" />
             </div>
             <div class="felt">
-              <label for="stadie">Fase <span class="pakrevd">*</span></label>
+              <label for="stadie">Hvilken fase er selskapet i? <span class="pakrevd">*</span></label>
               <select id="stadie" name="stadie" required>
-                <option value="">Velg…</option>
-                <option>Tidlig inntekt</option>
-                <option>Vekst</option>
-                <option>Etablert / lønnsom</option>
+                <option value="">Velg fase …</option>
+                <option>Tidlig kommersialisering (de første kundene)</option>
+                <option>Vekst (skalerer salget)</option>
+                <option>Etablert og lønnsomt</option>
                 <option>Annet</option>
               </select>
             </div>
+            <div class="felt">
+              <label for="grunnlagt">Grunnlagt (år)</label>
+              <input id="grunnlagt" name="grunnlagt" inputmode="numeric" placeholder="f.eks. 2021" />
+            </div>
+            <div class="felt">
+              <label for="ansatte">Antall ansatte</label>
+              <input id="ansatte" name="ansatte" inputmode="numeric" placeholder="f.eks. 8" />
+            </div>
           </div>
-        </fieldset>
+        </div>
 
-        <fieldset>
-          <legend>Kontakt</legend>
+        <div class="seksjon">
+          <h2>Kontaktperson</h2>
           <div class="rad">
             <div class="felt">
-              <label for="kontaktperson">Kontaktperson <span class="pakrevd">*</span></label>
+              <label for="kontaktperson">Navn <span class="pakrevd">*</span></label>
               <input id="kontaktperson" name="kontaktperson" required autocomplete="name" />
+            </div>
+            <div class="felt">
+              <label for="rolle">Rolle i selskapet</label>
+              <input id="rolle" name="rolle" placeholder="f.eks. daglig leder, gründer" />
             </div>
             <div class="felt">
               <label for="epost">E-post <span class="pakrevd">*</span></label>
@@ -122,43 +134,70 @@
               <input id="telefon" name="telefon" autocomplete="tel" />
             </div>
           </div>
-        </fieldset>
+        </div>
 
-        <fieldset>
-          <legend>Kapital og økonomi</legend>
+        <div class="seksjon">
+          <h2>Trekkraft så langt</h2>
           <div class="rad">
             <div class="felt">
-              <label for="sokt_belop">Søkt kapital</label>
-              <input id="sokt_belop" name="sokt_belop" placeholder="f.eks. 5–10 MNOK" />
+              <label for="omsetning">Omsetning siste 12 måneder</label>
+              <input id="omsetning" name="omsetning" placeholder="f.eks. 12 MNOK" />
             </div>
             <div class="felt">
-              <label for="omsetning">Omsetning siste 12 mnd</label>
-              <input id="omsetning" name="omsetning" placeholder="f.eks. 12 MNOK" />
+              <label for="vekst">Vekst siste år</label>
+              <input id="vekst" name="vekst" placeholder="f.eks. 40 % år over år" />
+            </div>
+            <div class="felt">
+              <label for="kunder">Antall kunder eller brukere</label>
+              <input id="kunder" name="kunder" placeholder="f.eks. 120 bedriftskunder" />
+            </div>
+            <div class="felt">
+              <label for="lonnsomhet">Lønnsomhet</label>
+              <select id="lonnsomhet" name="lonnsomhet">
+                <option value="">Velg …</option>
+                <option>Lønnsomt</option>
+                <option>I balanse</option>
+                <option>Investerer i vekst (negativt resultat)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="seksjon">
+          <h2>Kapitalbehovet</h2>
+          <div class="rad">
+            <div class="felt">
+              <label for="sokt_belop">Hvor mye ønsker dere å hente?</label>
+              <input id="sokt_belop" name="sokt_belop" placeholder="f.eks. 5–10 MNOK" />
             </div>
             <div class="felt">
               <label for="finansiering_hittil">Reist kapital hittil</label>
               <input id="finansiering_hittil" name="finansiering_hittil" placeholder="f.eks. 3 MNOK" />
             </div>
-            <div class="felt">
+            <div class="felt full">
               <label for="bruk_av_kapital">Hva skal kapitalen brukes til?</label>
-              <input id="bruk_av_kapital" name="bruk_av_kapital" placeholder="f.eks. salg, produktutvikling, internasjonalisering" />
+              <input id="bruk_av_kapital" name="bruk_av_kapital" placeholder="f.eks. bygge ut salgsteamet og gå inn i Sverige" />
             </div>
           </div>
-        </fieldset>
+        </div>
 
-        <fieldset>
-          <legend>Om muligheten</legend>
+        <div class="seksjon">
+          <h2>Team og mulighet</h2>
           <div class="felt full">
-            <label for="sammendrag">Kort sammendrag <span class="pakrevd">*</span></label>
-            <textarea id="sammendrag" name="sammendrag" required placeholder="Hva gjør dere, hva er trekkraften så langt, og hvorfor nå?"></textarea>
-            <p class="hjelp">2–3 avsnitt holder. Detaljene tar vi i en samtale.</p>
+            <label for="team">Kort om teamet</label>
+            <textarea id="team" name="team" style="min-height:90px" placeholder="Hvem står bak, og hva gjør dere godt rustet til å lykkes?"></textarea>
+          </div>
+          <div class="felt full">
+            <label for="sammendrag">Sammendrag av muligheten <span class="pakrevd">*</span></label>
+            <textarea id="sammendrag" name="sammendrag" required placeholder="Hva løser dere, for hvem, og hvorfor er dette riktig tidspunkt å investere?"></textarea>
+            <p class="hjelp">Noen avsnitt holder. Detaljene tar vi i en samtale.</p>
           </div>
           <div class="felt full fil">
-            <label for="vedlegg">Pitch / vedlegg</label>
+            <label for="vedlegg">Pitch deck eller vedlegg</label>
             <input id="vedlegg" name="vedlegg" type="file" accept=".pdf,.ppt,.pptx,.doc,.docx" />
             <p class="hjelp">PDF, PowerPoint eller Word. Maks 10 MB.</p>
           </div>
-        </fieldset>
+        </div>
 
         <button class="send" type="submit">Send henvendelse</button>
         <p id="status" class="status" role="status"></p>
@@ -177,20 +216,14 @@
     const skjema = document.getElementById("pitchskjema");
     const status = document.getElementById("status");
     const knapp = skjema.querySelector("button");
-
     skjema.addEventListener("submit", async (e) => {
       e.preventDefault();
-      status.className = "status";
-      status.textContent = "";
-      knapp.disabled = true;
-      knapp.textContent = "Sender…";
+      status.className = "status"; status.textContent = "";
+      knapp.disabled = true; knapp.textContent = "Sender …";
       try {
         const data = new FormData(skjema);
         const r = await fetch("/api/pitch", { method: "POST", body: data });
-        if (!r.ok) {
-          const j = await r.json().catch(() => ({}));
-          throw new Error(j.feil || "Noe gikk galt");
-        }
+        if (!r.ok) { const j = await r.json().catch(() => ({})); throw new Error(j.feil || "Noe gikk galt"); }
         skjema.reset();
         status.className = "status ok";
         status.textContent = "Takk! Henvendelsen er sendt. Du får en bekreftelse på e-post.";
@@ -198,8 +231,7 @@
         status.className = "status feil";
         status.textContent = err.message + " Du kan også skrive direkte til invest@quad.no.";
       } finally {
-        knapp.disabled = false;
-        knapp.textContent = "Send henvendelse";
+        knapp.disabled = false; knapp.textContent = "Send henvendelse";
       }
     });
   </script>
