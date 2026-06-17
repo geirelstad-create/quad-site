@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Søk kapital — Quad AS</title>
+<meta name="description" content="Søker selskapet ditt en kapitalpartner? Send en henvendelse til Quad AS." />
+<link rel="stylesheet" href="/stil.css" />
+<style>
+  .skjema-intro { max-width: 720px; margin: 0 auto; padding: 64px 0 8px; text-align: center; }
+  .skjema-intro h1 {
+    font-family: ui-serif, Georgia, serif; font-weight: 500;
+    font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.02em; margin: 0 0 16px;
+  }
+  .skjema-intro p { color: var(--dempet); font-size: 17px; margin: 0 auto; max-width: 56ch; }
+  .skjemaboks { max-width: 720px; margin: 0 auto; padding: 28px 0 90px; }
+  fieldset {
+    border: 1px solid var(--linje); border-radius: 14px;
+    padding: 24px 26px 8px; margin: 0 0 22px; background: var(--kort);
+  }
+  legend {
+    font-family: ui-serif, Georgia, serif; font-size: 15px; font-weight: 500;
+    padding: 0 10px; color: var(--teal);
+  }
+  .rad { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .felt { margin-bottom: 18px; }
+  .felt.full { grid-column: 1 / -1; }
+  .felt label {
+    display: block; font-size: 13px; letter-spacing: 0.03em; color: var(--dempet);
+    margin: 0 0 7px;
+  }
+  .felt label .pakrevd { color: var(--teal); }
+  .felt input, .felt select, .felt textarea {
+    width: 100%; padding: 11px 13px; border: 1px solid var(--linje);
+    border-radius: 9px; background: #fff; font-size: 15px; color: var(--tekst);
+    font-family: inherit;
+  }
+  .felt input:focus, .felt select:focus, .felt textarea:focus {
+    outline: 2px solid var(--teal); outline-offset: 1px; border-color: transparent;
+  }
+  .felt textarea { min-height: 120px; resize: vertical; }
+  .hjelp { font-size: 12px; color: var(--dempet); margin: 6px 0 0; }
+  .fil input { padding: 9px; background: var(--sand); }
+  .send {
+    background: var(--teal); color: #04211d; border: 0; padding: 14px 30px;
+    border-radius: 9px; font-size: 15px; font-weight: 600; cursor: pointer;
+  }
+  .send:hover { background: #37a59a; }
+  .send:disabled { opacity: 0.5; cursor: default; }
+  .status { margin-top: 16px; font-size: 15px; }
+  .status.ok { color: var(--teal); }
+  .status.feil { color: #c2603f; }
+  @media (max-width: 820px) { .rad { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div class="topp">
+    <a class="logo" href="/" aria-label="Quad AS, til forsiden">
+      <svg width="38" height="38" viewBox="0 0 100 100" role="img" aria-hidden="true">
+        <rect width="100" height="100" rx="14" fill="var(--quad-bla)"/>
+        <circle cx="50" cy="46" r="26" fill="none" stroke="#fff" stroke-width="9"/>
+        <circle cx="69" cy="66" r="8" fill="#fff"/>
+      </svg>
+      <span class="ordmerke">QUAD</span>
+    </a>
+    <nav>
+      <a href="/om.html">Om</a>
+      <a href="/sok-kapital.html" aria-current="page">Søk kapital</a>
+      <a href="/kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+
+  <main>
+    <section class="skjema-intro">
+      <h1>Søker dere en kapitalpartner?</h1>
+      <p>Quad AS investerer vekstkapital i gründerledede selskaper med velprøvde produkter og kommersiell fremdrift. Fortell oss om selskapet, så tar vi kontakt dersom det er aktuelt.</p>
+    </section>
+
+    <section class="skjemaboks">
+      <form id="pitchskjema">
+        <fieldset>
+          <legend>Selskapet</legend>
+          <div class="rad">
+            <div class="felt">
+              <label for="selskap">Selskapsnavn <span class="pakrevd">*</span></label>
+              <input id="selskap" name="selskap" required />
+            </div>
+            <div class="felt">
+              <label for="nettside">Nettside</label>
+              <input id="nettside" name="nettside" placeholder="https://" />
+            </div>
+            <div class="felt">
+              <label for="bransje">Bransje / sektor <span class="pakrevd">*</span></label>
+              <input id="bransje" name="bransje" required placeholder="f.eks. SaaS, industri, fintech" />
+            </div>
+            <div class="felt">
+              <label for="stadie">Fase <span class="pakrevd">*</span></label>
+              <select id="stadie" name="stadie" required>
+                <option value="">Velg…</option>
+                <option>Tidlig inntekt</option>
+                <option>Vekst</option>
+                <option>Etablert / lønnsom</option>
+                <option>Annet</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Kontakt</legend>
+          <div class="rad">
+            <div class="felt">
+              <label for="kontaktperson">Kontaktperson <span class="pakrevd">*</span></label>
+              <input id="kontaktperson" name="kontaktperson" required autocomplete="name" />
+            </div>
+            <div class="felt">
+              <label for="epost">E-post <span class="pakrevd">*</span></label>
+              <input id="epost" name="epost" type="email" required autocomplete="email" />
+            </div>
+            <div class="felt">
+              <label for="telefon">Telefon</label>
+              <input id="telefon" name="telefon" autocomplete="tel" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Kapital og økonomi</legend>
+          <div class="rad">
+            <div class="felt">
+              <label for="sokt_belop">Søkt kapital</label>
+              <input id="sokt_belop" name="sokt_belop" placeholder="f.eks. 5–10 MNOK" />
+            </div>
+            <div class="felt">
+              <label for="omsetning">Omsetning siste 12 mnd</label>
+              <input id="omsetning" name="omsetning" placeholder="f.eks. 12 MNOK" />
+            </div>
+            <div class="felt">
+              <label for="finansiering_hittil">Reist kapital hittil</label>
+              <input id="finansiering_hittil" name="finansiering_hittil" placeholder="f.eks. 3 MNOK" />
+            </div>
+            <div class="felt">
+              <label for="bruk_av_kapital">Hva skal kapitalen brukes til?</label>
+              <input id="bruk_av_kapital" name="bruk_av_kapital" placeholder="f.eks. salg, produktutvikling, internasjonalisering" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Om muligheten</legend>
+          <div class="felt full">
+            <label for="sammendrag">Kort sammendrag <span class="pakrevd">*</span></label>
+            <textarea id="sammendrag" name="sammendrag" required placeholder="Hva gjør dere, hva er trekkraften så langt, og hvorfor nå?"></textarea>
+            <p class="hjelp">2–3 avsnitt holder. Detaljene tar vi i en samtale.</p>
+          </div>
+          <div class="felt full fil">
+            <label for="vedlegg">Pitch / vedlegg</label>
+            <input id="vedlegg" name="vedlegg" type="file" accept=".pdf,.ppt,.pptx,.doc,.docx" />
+            <p class="hjelp">PDF, PowerPoint eller Word. Maks 10 MB.</p>
+          </div>
+        </fieldset>
+
+        <button class="send" type="submit">Send henvendelse</button>
+        <p id="status" class="status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footinner">
+      <span>Quad AS — Org.nr NO 881 952 882</span>
+      <a href="mailto:invest@quad.no">invest@quad.no</a>
+    </div>
+  </footer>
+
+  <script>
+    const skjema = document.getElementById("pitchskjema");
+    const status = document.getElementById("status");
+    const knapp = skjema.querySelector("button");
+
+    skjema.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      status.className = "status";
+      status.textContent = "";
+      knapp.disabled = true;
+      knapp.textContent = "Sender…";
+      try {
+        const data = new FormData(skjema);
+        const r = await fetch("/api/pitch", { method: "POST", body: data });
+        if (!r.ok) {
+          const j = await r.json().catch(() => ({}));
+          throw new Error(j.feil || "Noe gikk galt");
+        }
+        skjema.reset();
+        status.className = "status ok";
+        status.textContent = "Takk! Henvendelsen er sendt. Du får en bekreftelse på e-post.";
+      } catch (err) {
+        status.className = "status feil";
+        status.textContent = err.message + " Du kan også skrive direkte til invest@quad.no.";
+      } finally {
+        knapp.disabled = false;
+        knapp.textContent = "Send henvendelse";
+      }
+    });
+  </script>
+</body>
+</html>

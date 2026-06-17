@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kontakt — Quad AS</title>
+<meta name="description" content="Ta kontakt med Quad AS." />
+<link rel="stylesheet" href="/stil.css" />
+</head>
+<body>
+  <div class="topp">
+    <a class="logo" href="/" aria-label="Quad AS, til forsiden">
+      <svg width="38" height="38" viewBox="0 0 100 100" role="img" aria-hidden="true">
+        <rect width="100" height="100" rx="14" fill="var(--quad-bla)"/>
+        <circle cx="50" cy="46" r="26" fill="none" stroke="#fff" stroke-width="9"/>
+        <circle cx="69" cy="66" r="8" fill="#fff"/>
+      </svg>
+      <span class="ordmerke">QUAD</span>
+    </a>
+    <nav>
+      <a href="/om.html">Om</a>
+      <a href="/sok-kapital.html">Søk kapital</a>
+      <a href="/kontakt.html" aria-current="page">Kontakt</a>
+    </nav>
+  </div>
+
+  <main>
+    <section class="kontakt">
+      <h1>Kontakt</h1>
+      <p class="undertittel">Send oss en melding, så tar vi kontakt.</p>
+
+      <form id="kontaktskjema">
+        <div class="felt">
+          <label for="navn">Navn</label>
+          <input id="navn" name="navn" required autocomplete="name" />
+        </div>
+        <div class="felt">
+          <label for="epost">E-post</label>
+          <input id="epost" name="epost" type="email" required autocomplete="email" />
+        </div>
+        <div class="felt">
+          <label for="melding">Melding</label>
+          <textarea id="melding" name="melding" required></textarea>
+        </div>
+        <button class="send" type="submit">Send melding</button>
+        <p id="status" class="status" role="status"></p>
+      </form>
+
+      <p class="alt">Eller skriv direkte til <a href="mailto:invest@quad.no">invest@quad.no</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footinner">
+      <span>Quad AS — Org.nr NO 881 952 882</span>
+      <a href="mailto:invest@quad.no">invest@quad.no</a>
+    </div>
+  </footer>
+
+  <script>
+    const skjema = document.getElementById("kontaktskjema");
+    const status = document.getElementById("status");
+    const knapp = skjema.querySelector("button");
+
+    skjema.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      status.className = "status";
+      status.textContent = "";
+      knapp.disabled = true;
+      knapp.textContent = "Sender…";
+      try {
+        const data = {
+          navn: document.getElementById("navn").value,
+          epost: document.getElementById("epost").value,
+          melding: document.getElementById("melding").value,
+        };
+        const r = await fetch("/api/kontakt", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        if (!r.ok) {
+          const j = await r.json().catch(() => ({}));
+          throw new Error(j.feil || "Noe gikk galt");
+        }
+        skjema.reset();
+        status.className = "status ok";
+        status.textContent = "Takk! Meldingen er sendt. Du får en bekreftelse på e-post.";
+      } catch (err) {
+        status.className = "status feil";
+        status.textContent = err.message + " Du kan også skrive direkte til invest@quad.no.";
+      } finally {
+        knapp.disabled = false;
+        knapp.textContent = "Send melding";
+      }
+    });
+  </script>
+</body>
+</html>
