@@ -65,6 +65,7 @@
     </a>
     <nav>
       <a href="/om.html">Om</a>
+      <a href="/geir.html">Geir Elstad</a>
       <a href="/sok-kapital.html" aria-current="page">Søk kapital</a>
       <a href="/kontakt.html">Kontakt</a>
     </nav>
@@ -199,6 +200,14 @@
           </div>
         </div>
 
+        <!-- Honeypot + tidsstempel: usynlig spam-vern -->
+        <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
+          <label>La dette feltet stå tomt
+            <input id="website" name="website" tabindex="-1" autocomplete="off" />
+          </label>
+        </div>
+        <input type="hidden" id="lastet_ts" name="lastet_ts" value="" />
+
         <button class="send" type="submit">Send henvendelse</button>
         <p id="status" class="status" role="status"></p>
       </form>
@@ -208,7 +217,13 @@
   <footer>
     <div class="footinner">
       <span>Quad AS — Org.nr NO 881 952 882</span>
-      <a href="mailto:invest@quad.no">invest@quad.no</a>
+      <span class="foot-hoyre">
+        <a href="mailto:invest@quad.no">invest@quad.no</a>
+        <a class="linkedin" href="https://www.linkedin.com/in/geirelstad" target="_blank" rel="noopener" aria-label="Geir Elstad på LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 9.5H5.67V18h2.67V9.5zM7 6.4a1.55 1.55 0 1 0 0 3.1 1.55 1.55 0 0 0 0-3.1zM18.33 18v-4.66c0-2.49-1.33-3.65-3.1-3.65-1.43 0-2.07.79-2.43 1.34V9.5h-2.67V18h2.67v-4.5c0-.24.02-.47.09-.64.19-.47.62-.96 1.34-.96.95 0 1.33.72 1.33 1.78V18h2.67z"/></svg>
+          LinkedIn
+        </a>
+      </span>
     </div>
   </footer>
 
@@ -216,6 +231,7 @@
     const skjema = document.getElementById("pitchskjema");
     const status = document.getElementById("status");
     const knapp = skjema.querySelector("button");
+    document.getElementById("lastet_ts").value = Date.now(); // for tidssperre
     skjema.addEventListener("submit", async (e) => {
       e.preventDefault();
       status.className = "status"; status.textContent = "";
