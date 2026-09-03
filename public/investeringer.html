@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{om.tittel}}</title>
-  <meta name="description" content="{{om.beskrivelse}}">
+  <title>{{investeringer.tittel}}</title>
+  <meta name="description" content="{{investeringer.beskrivelse}}">
   <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/bilder/ikon-512.png">
-  <meta property="og:title" content="{{om.tittel}}">
-  <meta property="og:description" content="{{om.beskrivelse}}">
+  <meta property="og:title" content="{{investeringer.tittel}}">
+  <meta property="og:description" content="{{investeringer.beskrivelse}}">
   <meta property="og:image" content="/bilder/ikon-512.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,8 +28,8 @@
   <div class="wrap">
     <ul>
       <li><a href="/">{{meny.forside}}</a></li>
-      <li><a href="/investeringer">{{meny.investeringer}}</a></li>
-      <li><a href="/om" aria-current="page">{{meny.om}}</a></li>
+      <li><a href="/investeringer" aria-current="page">{{meny.investeringer}}</a></li>
+      <li><a href="/om">{{meny.om}}</a></li>
       <li><a href="/sok-kapital">{{meny.sok}}</a></li>
       <li><a href="/kontakt">{{meny.kontakt}}</a></li>
     </ul>
@@ -44,24 +44,30 @@
 
 <header class="hero liten">
   <div class="ring" aria-hidden="true"></div><div class="dot" aria-hidden="true"></div>
-  <div class="wrap"><p class="eyebrow">{{om.eyebrow}}</p><h1>{{om.overskrift}}</h1></div>
+  <div class="wrap"><p class="eyebrow">{{investeringer.eyebrow}}</p><h1>{{investeringer.overskrift}}</h1><p class="lead">{{investeringer.ingress}}</p></div>
 </header>
-<section><div class="wrap">
-  <div class="tekst">{{#om.avsnitt}}<p>{{.}}</p>{{/om.avsnitt}}</div>
-  <div class="person">
-    <div><div class="tile" style="max-width:260px;justify-self:start" aria-hidden="true"><svg viewBox="0 0 480 480"><rect width="480" height="480" rx="34" fill="#FFFFFF"/><circle cx="225" cy="225" r="150" fill="none" stroke="#0F1B3D" stroke-width="58"/><circle cx="388" cy="388" r="36" fill="#0F1B3D"/></svg></div>
-      <h3 style="margin-top:28px">{{om.geir_overskrift}}</h3><p class="rolle">{{om.geir_rolle}}</p></div>
-    <div class="tekst">{{#om.geir_avsnitt}}<p>{{.}}</p>{{/om.geir_avsnitt}}
-      <div class="fakta">{{#om.fakta}}<div><b>{{.verdi}}</b><span>{{.etikett}}</span></div>{{/om.fakta}}</div>
-    </div>
+<section id="omrader"><div class="wrap">
+  <div class="omrader">
+  {{#forside.omrader}}
+    <article class="omrade" id="{{.nummer}}"><span class="num">{{.nummer}}</span><i class="mark"></i><h3>{{.tittel}}</h3><p>{{.tekst}}</p>
+      <ul>{{#.punkter}}<li>{{.}}</li>{{/.punkter}}</ul></article>
+  {{/forside.omrader}}
   </div>
 </div></section>
+<section id="slik" style="padding-top:0"><div class="wrap">
+  <div class="head"><h2>{{forside.slik_overskrift}}</h2><p>{{forside.slik_ingress}}</p></div>
+  <div class="pgrid">
+  {{#forside.prinsipper}}<div><h3>{{.tittel}}</h3><p>{{.tekst}}</p></div>{{/forside.prinsipper}}
+  </div>
+  <dl class="kriterier">
+  {{#forside.kriterier}}<div><dt>{{.etikett}}</dt><dd>{{.verdi}}</dd></div>{{/forside.kriterier}}
+  </dl>
+</div></section>
+
 <section class="band"><div class="wrap">
   <div><h2>{{forside.sok_overskrift}}</h2><p>{{forside.sok_tekst}}</p><a class="btn" href="/sok-kapital">{{forside.sok_knapp}}</a></div>
   <ol class="steg">{{#sok.steg}}<li><span>—</span>{{.}}</li>{{/sok.steg}}</ol>
 </div></section>
-
-
 <footer><div class="wrap">
   <a class="logo" href="/" aria-label="{{selskap.navn}}"><img src="/bilder/logo-hvit.svg" alt="" width="846" height="320"></a>
   <span>{{selskap.copyright}} · Org.nr. {{selskap.orgnr}} · <a href="/kontakt">{{meny.kontakt}}</a></span>
@@ -74,6 +80,5 @@
     document.addEventListener("keydown", e => { if (e.key === "Escape") sett(false); });
   })();
 </script>
-
 </body>
 </html>

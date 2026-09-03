@@ -1,0 +1,173 @@
+{
+  "_hjelp": "All tekst på quad.no ligger i denne filen. Rediger teksten mellom anførselstegnene og lagre – Render publiserer automatisk. Ikke fjern komma, klammer eller anførselstegn. Bruk \\n for linjeskift i lange tekster.",
+  "selskap": {
+    "navn": "Quad Invest AS",
+    "orgnr": "NO 881 952 882",
+    "epost": "invest@quad.no",
+    "telefon": "+47 928 50 007",
+    "telefon_lenke": "+4792850007",
+    "adresse1": "Fjordalléen 16",
+    "adresse2": "0250 Oslo, Norway",
+    "copyright": "© 2026 Quad Invest AS"
+  },
+  "meny": {
+    "forside": "Forside",
+    "investeringer": "Investeringer",
+    "om": "Om",
+    "sok": "Søk kapital",
+    "kontakt": "Kontakt",
+    "lukk": "Lukk"
+  },
+  "forside": {
+    "tittel": "Quad Invest AS – privat investeringsselskap i Oslo",
+    "beskrivelse": "Quad Invest er et privat investeringsselskap i Oslo som investerer i gründerledede selskaper med inntekter og kommersiell fremdrift, samt eiendom.",
+    "eyebrow": "Privat investeringsselskap · Oslo · Gründereid",
+    "overskrift": "Kapital og erfaring til selskaper som skal videre",
+    "ingress": "Quad Invest er et privat investeringsselskap i Oslo. Vi investerer i gründerledede selskaper som har kommet forbi idéstadiet, og i eiendom – med tålmodig kapital, en pragmatisk tilnærming og erfaring fra å ha bygget selskaper selv.",
+    "knapp_primar": "Søk kapital",
+    "knapp_sekundar": "Om Quad Invest",
+    "omrader_overskrift": "Tre områder, én tilnærming",
+    "omrader_ingress": "Selskaper i ulike faser trenger ulik kapital. Felles for alt vi eier er at vi forstår virksomheten, kjenner menneskene og lar dem som driver, drive.",
+    "omrader": [
+      {
+        "nummer": "01",
+        "tittel": "Vekstkapital",
+        "tekst": "Vårt hovedfokus. Vi investerer i gründerledede selskaper med produkt i markedet, eksisterende inntekter og tydelig kommersiell fremdrift, som trenger kapital til å skalere – nye markeder, produkt eller organisasjon. Vi foretrekker lønnsom vekst framfor vekst for enhver pris.",
+        "punkter": [
+          "Inntekter og kunder på plass",
+          "Typisk 0,5–5 MNOK per investering",
+          "Minoritetspost, gjerne med medinvestorer"
+        ]
+      },
+      {
+        "nummer": "02",
+        "tittel": "Tidlig fase",
+        "tekst": "Unntaksvis går vi inn tidligere – når teamet er ekstra sterkt, problemet er tydelig og vi forstår markedet godt fra egen erfaring. Da gjerne sammen med andre investorer, og alltid med gründerne ved roret.",
+        "punkter": [
+          "Selektivt, få investeringer i året",
+          "Typisk 0,5–2 MNOK per investering",
+          "Teknologidrevne selskaper"
+        ]
+      },
+      {
+        "nummer": "03",
+        "tittel": "Eiendom",
+        "tekst": "Vi investerer i eiendom med lang horisont, og eier i dag eiendom i Kragerø og i Spania. Eiendommen gir porteføljen stabilitet, og gir oss frihet til å være tålmodige i selskapene.",
+        "punkter": [
+          "Kragerø og Spania",
+          "Direkte eierskap",
+          "Eie, ikke flippe"
+        ]
+      }
+    ],
+    "slik_overskrift": "Slik investerer vi",
+    "slik_ingress": "Vi har ingen fond som skal avvikles og ingen eksterne mandater. Det gir oss frihet til å investere etter noen få prinsipper vi faktisk følger.",
+    "prinsipper": [
+      {
+        "tittel": "Menneskene først",
+        "tekst": "Vi investerer i team før vi investerer i planer. En god plan overlever sjelden møtet med markedet – et godt team gjør det."
+      },
+      {
+        "tittel": "Vi forstår det vi eier",
+        "tekst": "Vi er bransjeagnostiske, men har tyngdepunktet i teknologidrevne selskaper – programvare og maskinvare. Det er der vi har bygget selv, og der vi kan bidra med mer enn kapital."
+      },
+      {
+        "tittel": "Kapitalpartner med exit i sikte",
+        "tekst": "Vi går inn med en tydelig plan for hvordan verdiene skal realiseres, men uten en fast klokke. Vi er med så lenge det gir mening for selskapet og for oss."
+      },
+      {
+        "tittel": "Passive eiere, tilgjengelige sparringspartnere",
+        "tekst": "Vi søker ikke styreplass og blander oss ikke i driften. Men vi tar telefonen når gründerne trenger et råd, en erfaring eller en introduksjon."
+      }
+    ],
+    "kriterier": [
+      {
+        "etikett": "Geografi",
+        "verdi": "Norge og Norden"
+      },
+      {
+        "etikett": "Fase",
+        "verdi": "Inntekter og kommersiell fremdrift"
+      },
+      {
+        "etikett": "Investering",
+        "verdi": "0,5–5 MNOK"
+      },
+      {
+        "etikett": "Rolle",
+        "verdi": "Passiv kapitalpartner"
+      }
+    ],
+    "om_eyebrow": "Om selskapet",
+    "om_overskrift": "Uavhengig, privat og tålmodig",
+    "om_tekst": "Quad Invest er etablert og ledet av Geir Elstad, som grunnla og eide Nextron i 24 år – fra oppstart i Oslo til en nordisk leverandør av servere, lagring og AI-infrastruktur med 655 millioner kroner i omsetning. Vi investerer egne midler, og vi vet hva gründere står i.",
+    "om_lenke": "Les mer om Quad Invest",
+    "sok_overskrift": "Søker du kapital?",
+    "sok_tekst": "Fortell oss kort om selskapet, tallene så langt og hva kapitalen skal brukes til. Vi leser alt vi får og svarer alle – også når svaret er nei.",
+    "sok_knapp": "Send oss en presentasjon",
+    "kontakt_overskrift": "Ta kontakt",
+    "kontakt_lenke": "Send oss en melding",
+    "omrader_lenke": "Les mer om hvordan vi investerer"
+  },
+  "om": {
+    "tittel": "Om Quad Invest AS",
+    "beskrivelse": "Quad Invest er et privat, gründereid investeringsselskap i Oslo, etablert og ledet av Geir Elstad.",
+    "eyebrow": "Om selskapet",
+    "overskrift": "Uavhengig, privat og tålmodig",
+    "avsnitt": [
+      "Quad Invest er et privat investeringsselskap i Oslo, etablert og ledet av Geir Elstad. Vi investerer egne midler, og foretrekker få, gjennomtenkte posisjoner framfor mange små.",
+      "Vi investerer i gründerledede selskaper som har kommet forbi idéstadiet – med produkt i markedet, eksisterende inntekter og tydelig kommersiell fremdrift. Vi er bransjeagnostiske, men har tyngdepunktet i teknologidrevne selskaper innen programvare og maskinvare, der vi har bygget selv.",
+      "Vi går inn som kapitalpartner, ikke som operativ investor. Det betyr en tydelig plan for hvordan verdiene skal realiseres, men ingen fast klokke, og ingen krav om styreplass. Vi er med så lenge det gir mening for selskapet og for oss."
+    ],
+    "geir_overskrift": "Geir Elstad",
+    "geir_rolle": "Founder | Director",
+    "geir_avsnitt": [
+      "Geir har bygget selskaper i over tretti år. Han grunnla Tech Computers i 1994 og Nextron i 2000, og var eneeier og daglig leder i Nextron gjennom 24 år med jevn, lønnsom vekst – fra oppstart i Oslo til en nordisk leverandør av servere, lagring og AI-infrastruktur med datterselskaper i Sverige, Danmark og Finland og en omsetning på 655 millioner kroner i 2024.",
+      "Det er den erfaringen vi tar med inn i hvert eierskap: å ha bygget fra null, gjennom nedturer og oppturer, med egne penger og uten ekstern kapital. Vi vet hva gründere står i, og vi er tålmodige, pragmatiske eiere som lar dem drive."
+    ],
+    "fakta": [
+      {
+        "verdi": "30+ år",
+        "etikett": "Som gründer og eier"
+      },
+      {
+        "verdi": "Egne midler",
+        "etikett": "Ingen eksterne mandater"
+      },
+      {
+        "verdi": "Oslo",
+        "etikett": "Aker Brygge"
+      }
+    ]
+  },
+  "sok": {
+    "tittel": "Søk kapital – Quad Invest AS",
+    "beskrivelse": "Presenter selskapet ditt for Quad Invest. Vi leser alle henvendelser og svarer alle.",
+    "eyebrow": "Søk kapital",
+    "overskrift": "Søker dere en kapitalpartner?",
+    "ingress": "Vi investerer 0,5–5 MNOK i gründerledede selskaper med inntekter og kommersiell fremdrift, fortrinnsvis teknologidrevne. Fyll ut skjemaet under – noen avsnitt holder, detaljene tar vi i en samtale. Vi leser alt vi får og svarer alle, også når svaret er nei.",
+    "steg": [
+      "Dere sender inn skjemaet, gjerne med en kort presentasjon som vedlegg",
+      "Vi svarer innen 14 dager – med et møte eller en begrunnelse",
+      "Møter, gjennomgang av tall og team, og et tilbud dersom vi går videre"
+    ],
+    "knapp": "Send henvendelse",
+    "takk": "Takk! Henvendelsen er sendt. Du får en bekreftelse på e-post."
+  },
+  "kontakt": {
+    "tittel": "Kontakt – Quad Invest AS",
+    "beskrivelse": "Kontakt Quad Invest AS i Oslo.",
+    "eyebrow": "Kontakt",
+    "overskrift": "Ta kontakt",
+    "ingress": "Send oss en melding, så tar vi kontakt. Gjelder det kapital til selskapet ditt, bruk gjerne skjemaet under Søk kapital.",
+    "knapp": "Send melding",
+    "takk": "Takk! Meldingen er sendt. Du får en bekreftelse på e-post."
+  },
+  "investeringer": {
+    "tittel": "Investeringer – Quad Invest AS",
+    "beskrivelse": "Quad Invest investerer 0,5–5 MNOK i gründerledede selskaper med inntekter og kommersiell fremdrift, og i eiendom.",
+    "eyebrow": "Investeringer",
+    "overskrift": "Tre områder, én tilnærming",
+    "ingress": "Selskaper i ulike faser trenger ulik kapital. Felles for alt vi eier er at vi forstår virksomheten, kjenner menneskene og lar dem som driver, drive."
+  }
+}
