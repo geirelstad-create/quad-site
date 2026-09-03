@@ -3,9 +3,11 @@ import helmet from "helmet";
 import multer from "multer";
 import { z } from "zod";
 import path from "path";
+import fs from "fs";
 import { fileURLToPath } from "url";
 import { config } from "./config.js";
 import { sendKontakt, sendPitch } from "./mailer.js";
+import { fyll, lesInnhold } from "./mal.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.join(__dirname, "..", "public");
@@ -137,8 +139,33 @@ app.post("/api/pitch", upload.single("vedlegg"), async (req, res) => {
   }
 });
 
-// ---------- Statiske sider + pene URL-er ----------
-app.use(express.static(PUBLIC, { extensions: ["html"] }));
+// ---------- HTML-sider fylles med tekst fra public/innhold.json ----------
+// Innholdet leses ved oppstart. Render starter tjenesten på nytt ved hver endring i GitHub,
+// så en redigering av innhold.json blir synlig etter neste deploy.
+const SIDER: Record<string, string> = {
+  "/": "index.html",
+  "/investeringer": "investeringer.html",
+  "/om": "om.html",
+  "/sok-kapital": "sok-kapital.html",
+  "/kontakt": "kontakt.html",
+};
+let innhold = lesInnhold(PUBLIC);
+const maler: Record<string, string> = {};
+for (const fil of Object.values(SIDER)) {
+  maler[fil] = fs.readFileSync(path.join(PUBLIC, fil), "utf8");
+}
+function sendSide(res: express.Response, fil: string) {
+  if (process.env.NODE_ENV !== "production") innhold = lesInnhold(PUBLIC); // live under utvikling
+  res.type("html").send(fyll(maler[fil], innhold));
+}
+for (const [url, fil] of Object.entries(SIDER)) {
+  app.get(url, (_req, res) => sendSide(res, fil));
+  if (url !== "/") app.get(url + ".html", (_req, res) => res.redirect(301, url));
+}
+app.get("/index.html", (_req, res) => res.redirect(301, "/"));
+
+// ---------- Øvrige statiske filer (css, bilder, favicon) ----------
+app.use(express.static(PUBLIC, { index: false }));
 app.get("/healthz", (_req, res) => res.send("ok"));
 
 app.listen(config.PORT, () =>

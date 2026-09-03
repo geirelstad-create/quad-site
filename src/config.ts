@@ -18,7 +18,7 @@ export const config = {
   SMTP_PASS: valgfri("SMTP_PASS"),
 
   // Avsender og mottaker
-  MAIL_FROM: valgfri("MAIL_FROM", "Quad AS <invest@quad.no>"),
+  MAIL_FROM: valgfri("MAIL_FROM", "Quad Invest AS <invest@quad.no>"),
   MAIL_TO: valgfri("MAIL_TO", "invest@quad.no"),
 };
 

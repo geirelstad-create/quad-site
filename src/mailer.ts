@@ -63,15 +63,15 @@ export async function sendKontakt(d: {
   // Bekreftelse til avsender
   await send({
     to: d.epost,
-    subject: "Vi har mottatt din henvendelse — Quad AS",
+    subject: "Vi har mottatt din henvendelse — Quad Invest AS",
     text:
-      `Hei ${d.navn},\n\nTakk for at du tok kontakt med Quad AS. ` +
+      `Hei ${d.navn},\n\nTakk for at du tok kontakt med Quad Invest AS. ` +
       `Vi har mottatt meldingen din og svarer så snart vi kan.\n\n` +
-      `Med vennlig hilsen\nQuad AS\ninvest@quad.no`,
+      `Med vennlig hilsen\nQuad Invest AS\ninvest@quad.no`,
     html:
       `<p>Hei ${esc(d.navn)},</p>` +
-      `<p>Takk for at du tok kontakt med Quad AS. Vi har mottatt meldingen din og svarer så snart vi kan.</p>` +
-      `<p>Med vennlig hilsen<br>Quad AS<br>invest@quad.no</p>`,
+      `<p>Takk for at du tok kontakt med Quad Invest AS. Vi har mottatt meldingen din og svarer så snart vi kan.</p>` +
+      `<p>Med vennlig hilsen<br>Quad Invest AS<br>invest@quad.no</p>`,
   });
 }
 
@@ -128,17 +128,17 @@ export async function sendPitch(d: PitchData, vedlegg?: Vedlegg) {
   // Bekreftelse til avsender (uten vedlegg)
   await send({
     to: d.epost,
-    subject: "Vi har mottatt din henvendelse — Quad AS",
+    subject: "Vi har mottatt din henvendelse — Quad Invest AS",
     text:
       `Hei ${d.kontaktperson},\n\n` +
-      `Takk for at dere tok kontakt med Quad AS angående ${d.selskap}. ` +
+      `Takk for at dere tok kontakt med Quad Invest AS angående ${d.selskap}. ` +
       `Vi har mottatt henvendelsen og går gjennom materialet. ` +
       `Dersom det er aktuelt for oss, tar vi kontakt for en videre samtale.\n\n` +
-      `Med vennlig hilsen\nQuad AS\ninvest@quad.no`,
+      `Med vennlig hilsen\nQuad Invest AS\ninvest@quad.no`,
     html:
       `<p>Hei ${esc(d.kontaktperson)},</p>` +
-      `<p>Takk for at dere tok kontakt med Quad AS angående <strong>${esc(d.selskap)}</strong>. ` +
+      `<p>Takk for at dere tok kontakt med Quad Invest AS angående <strong>${esc(d.selskap)}</strong>. ` +
       `Vi har mottatt henvendelsen og går gjennom materialet. Dersom det er aktuelt for oss, tar vi kontakt for en videre samtale.</p>` +
-      `<p>Med vennlig hilsen<br>Quad AS<br>invest@quad.no</p>`,
+      `<p>Med vennlig hilsen<br>Quad Invest AS<br>invest@quad.no</p>`,
   });
 }
