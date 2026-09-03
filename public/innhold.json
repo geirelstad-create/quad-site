@@ -8,7 +8,9 @@
     "telefon_lenke": "+4792850007",
     "adresse1": "Fjordalléen 16",
     "adresse2": "0250 Oslo, Norway",
-    "copyright": "© 2026 Quad Invest AS"
+    "copyright": "© 2026 Quad Invest AS",
+    "linkedin": "https://www.linkedin.com/company/quadinvestas",
+    "linkedin_tekst": "LinkedIn"
   },
   "meny": {
     "forside": "Forside",
@@ -32,7 +34,7 @@
       {
         "nummer": "01",
         "tittel": "Vekstkapital",
-        "tekst": "Vårt hovedfokus. Vi investerer i gründerledede selskaper med produkt i markedet, eksisterende inntekter og tydelig kommersiell fremdrift, som trenger kapital til å skalere – nye markeder, produkt eller organisasjon. Vi foretrekker lønnsom vekst framfor vekst for enhver pris.",
+        "tekst": "Vårt hovedfokus. Vi investerer i gründerledede selskaper med produkt i markedet, eksisterende inntekter og tydelig kommersiell fremdrift – selskaper med en klar forretningsmodell, et differensiert tilbud og ambisjoner om å vokse videre. Vi foretrekker lønnsom vekst framfor vekst for enhver pris.",
         "punkter": [
           "Inntekter og kunder på plass",
           "Typisk 0,5–5 MNOK per investering",
@@ -65,11 +67,11 @@
     "prinsipper": [
       {
         "tittel": "Menneskene først",
-        "tekst": "Vi investerer i team før vi investerer i planer. En god plan overlever sjelden møtet med markedet – et godt team gjør det."
+        "tekst": "Vi investerer i team før vi investerer i planer, og ser etter erfarne, entreprenørielle team med sterk produkt- og markedsinnsikt. En god plan overlever sjelden møtet med markedet – et godt team gjør det."
       },
       {
         "tittel": "Vi forstår det vi eier",
-        "tekst": "Vi er bransjeagnostiske, men har tyngdepunktet i teknologidrevne selskaper – programvare og maskinvare. Det er der vi har bygget selv, og der vi kan bidra med mer enn kapital."
+        "tekst": "Vi ser etter selskaper med et differensiert tilbud og varige konkurransefortrinn. Vi er bransjeagnostiske, men har tyngdepunktet i teknologidrevne selskaper – programvare og maskinvare. Det er der vi har bygget selv, og der vi kan bidra med mer enn kapital."
       },
       {
         "tittel": "Kapitalpartner med exit i sikte",
@@ -77,7 +79,7 @@
       },
       {
         "tittel": "Passive eiere, tilgjengelige sparringspartnere",
-        "tekst": "Vi søker ikke styreplass og blander oss ikke i driften. Men vi tar telefonen når gründerne trenger et råd, en erfaring eller en introduksjon."
+        "tekst": "Vi er en betrodd kapitalpartner, ikke en operativ investor. Vi søker ikke styreplass og blander oss ikke i driften – men vi tar telefonen når gründerne trenger et råd, en erfaring eller en introduksjon."
       }
     ],
     "kriterier": [
@@ -117,7 +119,7 @@
     "avsnitt": [
       "Quad Invest er et privat investeringsselskap i Oslo, etablert og ledet av Geir Elstad. Vi investerer egne midler, og foretrekker få, gjennomtenkte posisjoner framfor mange små.",
       "Vi investerer i gründerledede selskaper som har kommet forbi idéstadiet – med produkt i markedet, eksisterende inntekter og tydelig kommersiell fremdrift. Vi er bransjeagnostiske, men har tyngdepunktet i teknologidrevne selskaper innen programvare og maskinvare, der vi har bygget selv.",
-      "Vi går inn som kapitalpartner, ikke som operativ investor. Det betyr en tydelig plan for hvordan verdiene skal realiseres, men ingen fast klokke, og ingen krav om styreplass. Vi er med så lenge det gir mening for selskapet og for oss."
+      "Vi går inn som betrodd kapitalpartner, ikke som operativ investor. Det betyr en tydelig plan for hvordan verdiene skal realiseres, men ingen fast klokke, og ingen krav om styreplass. Vi er med så lenge det gir mening for selskapet og for oss."
     ],
     "geir_overskrift": "Geir Elstad",
     "geir_rolle": "Founder | Director",

@@ -15,33 +15,15 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
 .smal{max-width:820px}
 
-/* ---------- Toppmeny (hamburger på alle skjermer) ---------- */
-.nav{position:sticky;top:0;z-index:20;background:rgba(15,27,61,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px}
-.logo img{height:44px;width:auto;display:block}
-.nav-hoyre{display:flex;align-items:center;gap:22px}
-.nav-hoyre .cta{white-space:nowrap;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;border:1px solid var(--blue);border-radius:999px;padding:10px 20px;color:var(--white);transition:background .2s}
-.nav-hoyre .cta:hover{background:var(--blue)}
-.meny-knapp{background:none;border:0;padding:10px 0 10px 6px;cursor:pointer;display:flex;align-items:center;gap:14px;color:var(--soft);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
-.meny-knapp i{display:block;width:26px;height:14px;position:relative}
-.meny-knapp i::before,.meny-knapp i::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff;transition:transform .25s,top .25s}
-.meny-knapp i::before{top:0} .meny-knapp i::after{top:12px}
-.meny-apen .meny-knapp i::before{top:6px;transform:rotate(45deg)} .meny-apen .meny-knapp i::after{top:6px;transform:rotate(-45deg)}
-.overlegg{position:fixed;inset:0;z-index:15;background:var(--navy);display:none;overflow:auto}
-.meny-apen .overlegg{display:block}
-.meny-apen{overflow:hidden}
-.overlegg .ring{width:70vw;height:70vw;right:-20vw;top:-10vw;border-width:min(10vw,150px);opacity:.9}
-.overlegg .dot{display:block;right:8vw;top:52vw}
-.overlegg .wrap{position:relative;padding:150px 32px 80px;min-height:100%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
-.overlegg ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-.overlegg li a{font-family:Jost,sans-serif;font-size:clamp(34px,5vw,58px);font-weight:500;line-height:1.2;color:var(--soft);display:inline-flex;align-items:center;gap:22px;transition:color .2s}
-.overlegg li a::before{content:"";width:0;height:2px;background:var(--blue);transition:width .25s}
-.overlegg li a:hover,.overlegg li a[aria-current="page"]{color:var(--white)}
-.overlegg li a:hover::before,.overlegg li a[aria-current="page"]::before{width:40px}
-.overlegg .info{color:var(--mute);font-size:15px;line-height:1.8}
-.overlegg .info a:hover{color:#fff}
-.overlegg .info b{display:block;font-family:Jost,sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-bottom:8px;font-weight:500}
-@media (prefers-reduced-motion:reduce){.meny-knapp i::before,.meny-knapp i::after{transition:none}}
+/* ---------- Toppmeny ---------- */
+.nav{position:sticky;top:0;z-index:20;background:rgba(15,27,61,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:84px;gap:24px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+.logo{display:block} .logo-svg{height:44px;width:auto;display:block}
+.meny{list-style:none;margin:0;padding:0;display:flex;gap:32px;align-items:center;flex-wrap:wrap}
+.meny li a{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);font-weight:500;padding:8px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap}
+.meny li a:hover,.meny li a[aria-current="page"]{color:var(--white);border-color:var(--blue)}
+.meny li a.cta{border:1px solid var(--blue);border-radius:999px;padding:10px 20px;color:var(--white)}
+.meny li a.cta:hover,.meny li a.cta[aria-current="page"]{background:var(--blue);border-color:var(--blue)}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
@@ -69,6 +51,8 @@ h1{font-size:clamp(40px,6vw,76px);line-height:1.04;font-weight:500;letter-spacin
 .omrade-linje a{font-family:Jost,sans-serif;font-size:22px;font-weight:500;color:var(--white);display:inline-flex;align-items:center;gap:12px}
 .omrade-linje a::after{content:"→";color:var(--blue-soft);transition:transform .2s} .omrade-linje a:hover::after{transform:translateX(4px)}
 .hero.full .wrap{padding:120px 32px 110px}
+.hero.alene{border-bottom:0;min-height:calc(100vh - 84px - 160px);display:flex;align-items:center}
+.hero.alene .wrap{width:100%}
 @media (max-width:900px){.omrade-linje{grid-template-columns:1fr;gap:20px}}
 
 /* ---------- Seksjoner ---------- */
@@ -106,6 +90,7 @@ h2{font-size:clamp(30px,3.4vw,44px);font-weight:500;line-height:1.1;margin:0;let
 .om p{color:var(--soft);max-width:52ch}
 .tile{max-width:420px;width:100%;justify-self:end}
 .tile img,.tile svg{width:100%;height:auto;display:block}
+.omrade{scroll-margin-top:110px}
 .lenke{color:var(--white);border-bottom:1px solid var(--blue);padding-bottom:2px;font-family:Jost,sans-serif;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
 .lenke:hover{border-color:#fff}
 .fakta{display:grid;grid-template-columns:repeat(3,auto);gap:32px;margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
@@ -152,14 +137,20 @@ input::placeholder,textarea::placeholder{color:#6F789A}
 .status.ok{color:var(--ok)} .status.feil{color:var(--feil)}
 
 /* ---------- Bunn ---------- */
-footer{border-top:1px solid var(--line);padding:36px 0}
-footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--mute)}
-footer .logo img{height:30px}
+footer{border-top:1px solid var(--line);padding:48px 0 40px}
+footer .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap;font-size:15px;color:var(--mute)}
+footer .logo-svg{height:44px}
+.f-adr{margin:18px 0 0;font-size:14px}
+.f-hoyre{display:flex;flex-direction:column;align-items:flex-end;gap:10px;text-align:right}
+.f-hoyre a{color:var(--soft);display:inline-flex;align-items:center;gap:8px;transition:color .2s} .f-hoyre a:hover{color:#fff}
+.f-hoyre .li{color:var(--blue-soft)}
+.f-hoyre span{font-size:13px;margin-top:6px}
+@media (max-width:900px){.f-hoyre{align-items:flex-start;text-align:left}}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 @media (max-width:900px){
-  .meny-knapp span{display:none} .nav-hoyre .cta{padding:8px 14px;font-size:12px}
-  .overlegg .wrap{grid-template-columns:1fr;padding-top:120px;align-items:start}
+  .nav .wrap{justify-content:center;gap:12px 20px;padding:14px 20px}
+  .meny{justify-content:center;gap:6px 18px} .meny li a{font-size:12px;padding:6px 0} .meny li a.cta{padding:8px 16px}
   .hero .wrap{padding:80px 24px 100px} .ring{width:90vw;height:90vw;right:-40vw;top:-30vw;border-width:12vw} .dot{display:none}
   .head,.om .wrap,.band .wrap,.kontakt .wrap,.pgrid,.person,.rad{grid-template-columns:1fr}
   .omrader{grid-template-columns:1fr} .kriterier{grid-template-columns:1fr 1fr} .kriterier div{border-bottom:1px solid var(--line)}
