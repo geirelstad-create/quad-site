@@ -1,5 +1,5 @@
 {
-  "_hjelp": "All tekst på quad.no ligger i denne filen. Rediger teksten mellom anførselstegnene og lagre – Render publiserer automatisk. Ikke fjern komma, klammer eller anførselstegn. Bruk \\n for linjeskift i lange tekster.",
+  "_hjelp": "All tekst på quad.no ligger i denne filen. Rediger teksten mellom anførselstegnene og lagre – Render publiserer automatisk. Ikke fjern komma, klammer eller anførselstegn. Bruk \\n for linjeskift i lange tekster. Porteføljelogoer: legg filen i public/bilder/portefolje/ og skriv filnavnet i feltet \"logo\" (f.eks. \"visuado.svg\"). Tomt felt = selskapsnavnet vises som tekst.",
   "selskap": {
     "navn": "Quad Invest AS",
     "orgnr": "NO 881 952 882",
@@ -18,7 +18,8 @@
     "om": "Om",
     "sok": "Søk kapital",
     "kontakt": "Kontakt",
-    "lukk": "Lukk"
+    "lukk": "Lukk",
+    "portefolje": "Portefølje"
   },
   "forside": {
     "tittel": "Quad Invest AS – privat investeringsselskap i Oslo",
@@ -171,5 +172,60 @@
     "eyebrow": "Investeringer",
     "overskrift": "Tre områder, én tilnærming",
     "ingress": "Selskaper i ulike faser trenger ulik kapital. Felles for alt vi eier er at vi forstår virksomheten, kjenner menneskene og lar dem som driver, drive."
+  },
+  "portefolje": {
+    "overskrift": "Portefølje",
+    "ingress": "Selskapene vi har investert i. Logo og beskrivelse er gjengitt med selskapenes samtykke.",
+    "investert_etikett": "Investert",
+    "selskaper": [
+      {
+        "navn": "Visuado",
+        "url": "https://visuado.com",
+        "bransje": "SaaS · PropTech",
+        "aar": "2025",
+        "logo": "",
+        "beskrivelse": "Gjør BIM-filer om til fotorealistiske, interaktive visninger som hjelper eiendomsutviklere å selge boliger før de er bygget."
+      },
+      {
+        "navn": "Variable",
+        "url": "https://variable.global",
+        "bransje": "SaaS · Bærekraft",
+        "aar": "2025",
+        "logo": "",
+        "beskrivelse": "Automatiserer livssyklusanalyser (LCA) for produsenter, slik at de kan lage miljødeklarasjoner og digitale produktpass for hele sortimentet."
+      },
+      {
+        "navn": "Unlisted",
+        "url": "https://unlisted.ai",
+        "bransje": "SaaS · FinTech",
+        "aar": "2025",
+        "logo": "",
+        "beskrivelse": "Plattform for aksjebok, opsjonsprogrammer og investorrapportering – eierstyring for vekstselskaper på ett sted."
+      },
+      {
+        "navn": "MediPath",
+        "url": "https://medipath.no",
+        "bransje": "MedTech",
+        "aar": "2025",
+        "logo": "",
+        "beskrivelse": "Finner riktig spesialist i Norden og Europa for pasienter som venter på behandling, koordinerer reisen og sikrer Helfo-refusjon."
+      },
+      {
+        "navn": "Capitool",
+        "url": "https://capitool.no",
+        "bransje": "Invest",
+        "aar": "2026",
+        "logo": "",
+        "beskrivelse": "Investerings- og rådgivningsselskap drevet av erfarne investorer og bransjeeksperter."
+      },
+      {
+        "navn": "Pitch40",
+        "url": "https://pitch40.com",
+        "bransje": "Invest",
+        "aar": "2026",
+        "logo": "",
+        "beskrivelse": "Kurert investornettverk som finner og finansierer kvalitetssikrede vekstselskaper gjennom investorarrangementer og en egen investeringsplattform."
+      }
+    ]
   }
 }

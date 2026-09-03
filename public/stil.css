@@ -100,6 +100,19 @@ h2{font-size:clamp(30px,3.4vw,44px);font-weight:500;line-height:1.1;margin:0;let
 .person h3{font-size:28px;font-weight:500;margin:0 0 4px}
 .person .rolle{color:var(--mute);font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-family:Jost,sans-serif}
 
+/* Portefølje */
+.portefolje{padding-top:0;scroll-margin-top:90px}
+.pgrid-logo{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
+.pf{background:var(--navy);padding:40px 32px 36px;display:flex;flex-direction:column;gap:18px;transition:background .25s;min-height:260px}
+.pf:hover{background:var(--navy2)}
+.pf-logo{height:48px;display:flex;align-items:center}
+.pf-logo img{max-height:40px;max-width:180px;width:auto;filter:brightness(0) invert(1);opacity:.92}
+.pf-logo span{font-family:Jost,sans-serif;font-size:26px;font-weight:500;letter-spacing:.02em;color:var(--white)}
+.pf-meta{margin:0;display:flex;justify-content:space-between;gap:12px;font-family:Jost,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.pf-tekst{margin:0;color:var(--soft);font-size:16px;line-height:1.55}
+.pf:hover .pf-logo span{color:#fff}
+@media (max-width:900px){.pgrid-logo{grid-template-columns:1fr}}
+
 /* Søk kapital-bånd */
 .band{background:var(--blue);padding:96px 0}
 .band .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}

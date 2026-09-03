@@ -2,6 +2,7 @@
 //
 //   {{sti.til.tekst}}           -> tekst (HTML-escapet)
 //   {{#sti.til.liste}} … {{/sti.til.liste}}  -> gjentas for hvert element
+//   {{?felt}} … {{/felt}} vises bare hvis feltet har verdi ({{^felt}} = hvis tomt)
 //       inne i en liste: {{.}} = elementet (streng), {{.felt}} = felt på elementet
 //
 import fs from "fs";
@@ -25,6 +26,12 @@ export function fyll(mal: string, data: any, lokal: any = null): string {
     const liste = hent(data, sti, lokal);
     if (!Array.isArray(liste)) return "";
     return liste.map((el) => fyll(kropp, data, el)).join("");
+  });
+  // Betingelser: {{?felt}} … {{/felt}} vises hvis feltet har verdi, {{^felt}} … {{/felt}} hvis det er tomt
+  mal = mal.replace(/\{\{([?^])([\w.]+)\}\}([\s\S]*?)\{\{\/\2\}\}/g, (_m, op, sti, kropp) => {
+    const v = hent(data, sti, lokal);
+    const sann = Array.isArray(v) ? v.length > 0 : Boolean(v);
+    return (op === "?") === sann ? fyll(kropp, data, lokal) : "";
   });
   // Enkeltverdier
   return mal.replace(/\{\{([\w.]+)\}\}/g, (_m, sti) => esc(hent(data, sti, lokal)));

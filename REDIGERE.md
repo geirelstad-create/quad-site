@@ -24,3 +24,9 @@ Tips
 
 ## Miljøvariabler i Render
 Som før (se `.env.example`): `PUBLIC_URL`, `SMTP_*`, `MAIL_FROM`, `MAIL_TO`. Standardverdien for `MAIL_FROM` er nå «Quad Invest AS <invest@quad.no>» – oppdater verdien i Render hvis den er satt eksplisitt der.
+
+## Portefølje
+Selskapene ligger i `innhold.json` under `portefolje.selskaper` (navn, url, bransje, år, logo, beskrivelse).
+- Uten logo vises selskapsnavnet som tekst.
+- For å vise logo: legg filen (SVG eller PNG med gjennomsiktig bakgrunn) i `public/bilder/portefolje/` og skriv filnavnet i feltet `"logo"`, f.eks. `"visuado.svg"`. Logoen gjengis automatisk i hvitt, så alle får samme uttrykk.
+- Legg til eller fjern selskaper ved å kopiere/slette et helt element `{ … }` i listen.
