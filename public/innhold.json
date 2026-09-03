@@ -55,9 +55,9 @@
       {
         "nummer": "03",
         "tittel": "Eiendom",
-        "tekst": "Vi investerer i eiendom med lang horisont, og eier i dag eiendom i Kragerø og i Spania. Eiendommen gir porteføljen stabilitet, og gir oss frihet til å være tålmodige i selskapene.",
+        "tekst": "Vi investerer i eiendom med lang horisont, og eier i dag eiendom i Norge og Spania. Eiendommen gir porteføljen stabilitet, og gir oss frihet til å være tålmodige i selskapene.",
         "punkter": [
-          "Kragerø og Spania",
+          "Norge og Spania",
           "Direkte eierskap",
           "Eie, ikke flippe"
         ]
@@ -179,12 +179,22 @@
     "investert_etikett": "Investert",
     "selskaper": [
       {
+        "navn": "Nextron",
+        "url": "https://nextron.no",
+        "bransje": "IT-infrastruktur",
+        "aar": "2024",
+        "merknad": "19 % eierandel",
+        "logo": "",
+        "beskrivelse": "Nordisk leverandør av servere, lagring og AI-infrastruktur, grunnlagt av Geir Elstad i 2000. Quad Invest beholdt en eierandel da selskapet fikk nye eiere i 2024."
+      },
+      {
         "navn": "Visuado",
         "url": "https://visuado.com",
         "bransje": "SaaS · PropTech",
         "aar": "2025",
         "logo": "",
-        "beskrivelse": "Gjør BIM-filer om til fotorealistiske, interaktive visninger som hjelper eiendomsutviklere å selge boliger før de er bygget."
+        "beskrivelse": "Står bak Walkable – virtuelle visninger laget rett fra mobilen, uten app eller spesialutstyr. Lansert i 2026 for meglere, eiendomsselskaper og markedsplasser, med et globalt marked og en svært skalerbar forretningsmodell.",
+        "merknad": ""
       },
       {
         "navn": "Variable",
@@ -192,7 +202,8 @@
         "bransje": "SaaS · Bærekraft",
         "aar": "2025",
         "logo": "",
-        "beskrivelse": "Automatiserer livssyklusanalyser (LCA) for produsenter, slik at de kan lage miljødeklarasjoner og digitale produktpass for hele sortimentet."
+        "beskrivelse": "Automatiserer livssyklusanalyser (LCA) for produsenter, slik at de kan lage miljødeklarasjoner og digitale produktpass for hele sortimentet.",
+        "merknad": ""
       },
       {
         "navn": "Unlisted",
@@ -200,7 +211,8 @@
         "bransje": "SaaS · FinTech",
         "aar": "2025",
         "logo": "",
-        "beskrivelse": "Plattform for aksjebok, opsjonsprogrammer og investorrapportering – eierstyring for vekstselskaper på ett sted."
+        "beskrivelse": "Plattform for aksjebok, opsjonsprogrammer og investorrapportering – eierstyring for vekstselskaper på ett sted.",
+        "merknad": ""
       },
       {
         "navn": "MediPath",
@@ -208,7 +220,8 @@
         "bransje": "MedTech",
         "aar": "2025",
         "logo": "",
-        "beskrivelse": "Finner riktig spesialist i Norden og Europa for pasienter som venter på behandling, koordinerer reisen og sikrer Helfo-refusjon."
+        "beskrivelse": "Finner riktig spesialist i Norden og Europa for pasienter som venter på behandling, koordinerer reisen og sikrer Helfo-refusjon.",
+        "merknad": ""
       },
       {
         "navn": "Capitool",
@@ -216,7 +229,8 @@
         "bransje": "Invest",
         "aar": "2026",
         "logo": "",
-        "beskrivelse": "Investerings- og rådgivningsselskap drevet av erfarne investorer og bransjeeksperter."
+        "beskrivelse": "Investerings- og rådgivningsselskap drevet av erfarne investorer og bransjeeksperter.",
+        "merknad": ""
       },
       {
         "navn": "Pitch40",
@@ -224,7 +238,8 @@
         "bransje": "Invest",
         "aar": "2026",
         "logo": "",
-        "beskrivelse": "Kurert investornettverk som finner og finansierer kvalitetssikrede vekstselskaper gjennom investorarrangementer og en egen investeringsplattform."
+        "beskrivelse": "Kurert investornettverk som finner og finansierer kvalitetssikrede vekstselskaper gjennom investorarrangementer og en egen investeringsplattform.",
+        "merknad": ""
       }
     ]
   }

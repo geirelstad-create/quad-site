@@ -32,10 +32,12 @@
   <div class="wrap"><p class="eyebrow">{{investeringer.eyebrow}}</p><h1>{{investeringer.overskrift}}</h1><p class="lead">{{investeringer.ingress}}</p></div>
 </header>
 <section id="omrader"><div class="wrap">
-  <div class="omrader">
+  <div class="omrader stablet">
   {{#forside.omrader}}
-    <article class="omrade" id="{{.nummer}}"><span class="num">{{.nummer}}</span><i class="mark"></i><h3>{{.tittel}}</h3><p>{{.tekst}}</p>
-      <ul>{{#.punkter}}<li>{{.}}</li>{{/.punkter}}</ul></article>
+    <article class="omrade" id="{{.nummer}}">
+      <div class="omrade-venstre"><span class="num">{{.nummer}}</span><h3>{{.tittel}}</h3></div>
+      <div class="omrade-hoyre"><p>{{.tekst}}</p><ul>{{#.punkter}}<li>{{.}}</li>{{/.punkter}}</ul></div>
+    </article>
   {{/forside.omrader}}
   </div>
 </div></section>
@@ -55,7 +57,7 @@
   {{#portefolje.selskaper}}
     <a class="pf" href="{{.url}}" target="_blank" rel="noopener">
       <div class="pf-logo">{{?.logo}}<img src="/bilder/portefolje/{{.logo}}" alt="{{.navn}}">{{/.logo}}{{^.logo}}<span>{{.navn}}</span>{{/.logo}}</div>
-      <p class="pf-meta"><span>{{.bransje}}</span><span>{{portefolje.investert_etikett}} {{.aar}}</span></p>
+      <p class="pf-meta"><span>{{.bransje}}</span><span>{{?.merknad}}{{.merknad}}{{/.merknad}}{{^.merknad}}{{portefolje.investert_etikett}} {{.aar}}{{/.merknad}}</span></p>
       <p class="pf-tekst">{{.beskrivelse}}</p>
     </a>
   {{/portefolje.selskaper}}
